@@ -1,0 +1,12 @@
+.stats-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    mat-card {
+        margin-bottom: 15px;
+        flex: 25;
+        margin-right: 10px;
+    }
+}

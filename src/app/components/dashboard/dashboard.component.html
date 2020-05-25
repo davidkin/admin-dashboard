@@ -1,0 +1,62 @@
+<div>
+    <app-widget-area-chart 
+        [chartOptions]='areaChartSettings'
+    ></app-widget-area-chart>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div class="stats-cards">
+    <mat-card>
+        <app-widget-cards 
+            [label]="'New Users'" 
+            [total]="'12k'" 
+            [percentage]="'50'"
+            [chartOptions]="cardChartSettings"
+        ></app-widget-cards>
+    </mat-card>
+    
+    <mat-card>
+        <app-widget-cards 
+            [label]="'User retention'" 
+            [total]="'10k'" 
+            [percentage]="'40'"
+            [chartOptions]="cardChartSettings"
+        ></app-widget-cards>
+    </mat-card>
+
+    <mat-card>
+        <app-widget-cards 
+            [label]="'Users engagement'" 
+            [total]="'8k'" 
+            [percentage]="'30'"
+            [chartOptions]="cardChartSettings"
+        ></app-widget-cards>
+    </mat-card>
+
+    <mat-card>
+        <app-widget-cards 
+            [label]="'Referral'" 
+            [total]="'6k'" 
+            [percentage]="'20'"
+            [chartOptions]="cardChartSettings"
+        ></app-widget-cards>
+    </mat-card>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <div fxFlex="60">Table</div>
+    <div fxFlex="40">
+        <app-widget-pie [chartOptions]='pieChartSettings'></app-widget-pie>
+    </div>
+</div>
