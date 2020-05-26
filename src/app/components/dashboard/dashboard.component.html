@@ -54,9 +54,11 @@
 
 <br>
 
-<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
-    <div fxFlex="60">Table</div>
-    <div fxFlex="40">
+<div class="table-pie">
+    <div class="table-item">
+        <app-widget-table></app-widget-table>
+    </div>
+    <div class="pie-item">
         <app-widget-pie [chartOptions]='pieChartSettings'></app-widget-pie>
     </div>
 </div>

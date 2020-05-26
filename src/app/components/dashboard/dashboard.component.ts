@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartService } from 'src/app/shared/services/chart.service';
-import { IHighchart } from 'src/app/shared/interfaces/highchart.interface';
+import { IHighchart } from 'src/app/shared/interfaces/chart/highchart.interface';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
     private chartService: ChartService
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     const areaChartData = {
       type: 'area',
       title: 'Random Data',

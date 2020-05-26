@@ -4,6 +4,7 @@ import {
   Output,
   EventEmitter
 } from '@angular/core';
+import resizeEvent from '../../utils/resize';
 
 @Component({
   selector: 'app-header',
@@ -17,14 +18,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() { }
 
-  onToggleSidebar() {
+  onToggleSidebar(): void {
     this.toggleSidebar.emit(null);
 
-    setTimeout(() => {
-      window.dispatchEvent(
-        new Event('resize')
-      );
-    }, 300);
+    resizeEvent();
   }
 
 }

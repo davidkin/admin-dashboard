@@ -12,7 +12,9 @@ import {
   MatIconModule,
   MatButtonModule,
   MatMenuModule,
-  MatListModule
+  MatListModule,
+  MatTableModule,
+  MatPaginatorModule
 } from '@angular/material';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -20,6 +22,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
 import { RouterModule } from '@angular/router';
 import { CardsComponent } from './widgets/cards/cards.component';
 import { PieComponent } from './widgets/pie/pie.component';
+import { TableComponent } from './widgets/table/table.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { PieComponent } from './widgets/pie/pie.component';
     AreaChartComponent,
     CardsComponent,
     PieComponent,
+    TableComponent,
   ],
   imports: [
     CommonModule,
@@ -40,6 +44,8 @@ import { PieComponent } from './widgets/pie/pie.component';
     MatButtonModule,
     MatMenuModule,
     MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
 
     FlexLayoutModule,
     HighchartsChartModule
@@ -50,7 +56,8 @@ import { PieComponent } from './widgets/pie/pie.component';
     FooterComponent,
     AreaChartComponent,
     CardsComponent,
-    PieComponent
+    PieComponent,
+    TableComponent
   ]
 })
 export class SharedModule { }

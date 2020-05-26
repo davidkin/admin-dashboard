@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IHighchart } from '../interfaces/highchart.interface';
+import { IHighchart } from '../interfaces/chart/highchart.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +8,8 @@ export class ChartService {
 
   constructor() { }
 
-
-  createChart(setting) {
-    const { type, title, subtitle, series, subType } = setting;
+  createChart(settings): IHighchart {
+    const { type, title, subtitle, series, subType } = settings;
 
     const chartSetting: IHighchart = {
       chart: {
@@ -46,12 +45,10 @@ export class ChartService {
 
     this.udpateChartSetting(chartSetting);
 
-    console.log(chartSetting);
-
     return chartSetting;
   }
 
-  udpateChartSetting(chartSetting) {
+  udpateChartSetting(chartSetting): void {
 
     if (chartSetting.chart.type === 'area' && !chartSetting.chart.subType) {
       chartSetting.tooltip.valueSuffix = ' millions';
